@@ -1,0 +1,76 @@
+\:root
+  --light-yellow: #FBF1B9
+  --yellow: #FFE700
+  --orange: #E5A91A
+  --pink: #CF6B9C
+  --blue: #0028FF
+  --black: #000000
+
+html, body
+  height: 100%
+
+body
+  margin: 0
+  background: var(--orange)
+  display: flex
+  align-items: center
+  justify-content: center
+
+main
+  font-family: "Glacial Indifference"
+  background: var(--yellow)
+  color: var(--blue)
+  box-shadow: 22px 22px var(--black)
+  height: 100%
+  max-height: 594px
+  width: 428px
+  display: flex
+  flex-flow: column nowrap
+  > div
+    margin: 31px 28px
+    width: calc(100% - 56px)
+  > div#title
+    > h1
+      font-weight: 400
+      font-size: 63px
+      margin: -24px 0 -15px
+    > h2
+      font-weight: 700
+      font-size: 50px
+      margin: -26px 0 -12px 65px //or left - 93px
+      text-transform: lowercase
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+  > div#currencies
+    margin: auto
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    overflow: auto
+    &::-webkit-scrollbar
+      width: 5px
+    &::-webkit-scrollbar-thumb
+      background: rgba(0, 0, 0, .5)
+      border-radius: 5px
+    > .currencyBox
+      background: var(--light-yellow)
+      width: 168px
+      height: 141px
+      margin-bottom: 36px
+      &:nth-last-child(2), &:nth-last-child(1)
+        margin-bottom: 0
+      > .bar
+        background: var(--pink)
+        height: 100%
+        width: 15%
+        display: none
+  > div#footer
+    > h3
+      font-weight: 400
+      font-size: 40px
+      margin: -22px 0 -10px
+    > #endcard
+      display: none
+a
+  color: #00B7FF
